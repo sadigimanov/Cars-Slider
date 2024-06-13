@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': '#0F52BA',
+                        'custom-red': '#C21807',
+                    },
+                    backgroundImage: {
+                        'custom-bg': "url('./assets/img/garrage.jpg')",
+                    },
+                    fontFamily: {
+                        'oswald': ["Oswald", 'sans-serif'],
+                    },
+                },
+            },
+            plugins: [],
+        }
+    </script>
+
+</head>
+
+<body class="bg-custom-bg bg-no-repeat bg-cover bg-center font-oswald">
+    <div class="container flex flex-col items-center justify-center h-screen mx-auto gap-[70px]">
+        <h1 class="text-[120px] text-gray-100">Cars Slider</h1>
+        <div class=" p-[20px] border mx-auto rounded-[8px] ">
+            <div
+                class="w-[500px] h-[380px] rounded-[8px]  overflow-hidden  mb-[20px] relative">
+                <img id="carImg" class="size-full object-cover" src="assets/img/mustang.webp" alt="">
+                <div class="buttons absolute flex justify-between top-1/2 w-full">
+                    <button onclick="prevBtn()" id="leftBtn" class="size-[40px] rounded-full bg-[#414141] ml-[10px]"><i
+                            class="text-white fa-solid fa-chevron-left"></i></button>
+                    <button onclick="nextBtn()" id="rightBtn" class="size-[40px] rounded-full bg-[#414141] mr-[10px]"><i
+                            class="text-white fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="textContent">
+                <h3 id="title" class="font-bold mb-[10px] text-[20px]">2016 Mustang GT, San Francisco, United States</h3>
+                <p id="explain" class="text-gray-200 font-bold">Published on May 17, 2017</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
